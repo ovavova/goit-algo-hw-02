@@ -14,7 +14,7 @@ def process_request(queue: Queue) -> None:
     if not queue.empty():
         id = queue.get()
         dots = "..."
-        for i in range(1, random.randint(2, 12)):
+        for i in range(1, random.randint(2, 12)):               # Animation and random time for tasks
             print(f"Request {id["req_id"]} processing {dots}")
             time.sleep(0.3)
             dots = dots + "..."
